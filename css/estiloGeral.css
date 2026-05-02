@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background-color: #e3e9f7;
+    display: flex;
+}
+main{
+    padding: 20px;
+}
+
+#sidebar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #ffff;
+    height: 100vh;
+    border-radius: 0px 18px 18px 0px;  
+    position: relative;
+    transition: all .5s;
+    min-width: 82px;
+}
+
+#sidebarContent{
+    padding: 12px;
+}
+
+#user{
+   display: flex;
+   align-items: center;
+   gap: 8px;
+   margin-bottom:24px ; 
+}
+
+#userInfos{
+    display: flex;
+    flex-direction: column;
+}
+/* ultimo span dentro de userInfos (ultimo filho) */
+#userInfos span:last-child{
+    color: #6b6b6b;
+    font-size: 12px;
+}
+
+#sideItems{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style: none;
+}
+
+.sideItem{
+    padding: 14px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.sideItem.active{
+    background-color: #4f46e5;
+}
+/* apenas hover quem nao tiver a class active */
+.sideItem:hover:not(.active), #btnLogout:hover{  
+    background-color: #e3e9f7;
+}
+
+.sideItem a{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0a0a0a;
+    
+}
+
+.sideItem.active a {
+    color: #e3e9f7;
+    
+}
+
+.sideItem a i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px ;
+    height: 20px;
+}
+
+#logout{
+    border-top: 1px solid #e3e9f7;
+    padding: 12px;
+}
+
+#btnLogout{
+    border: none;
+    padding: 12px;
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+    align-items: center;
+    border-radius: 8px;
+    text-align: start;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+#btnOpen{
+   position: absolute;
+   top: 30px;
+   right: -10px;
+   background-color: #4f46e5;
+   color: #e3e9f7;
+   border-radius: 100%;
+   width: 25px;
+   height: 25px;
+   border: none;
+   cursor: pointer; 
+   text-align: center;
+   
+}
+
+#btnOpenIcon{
+    display: inline-block;
+    transition: transform .3s ease;
+    transform-origin: center;
+    font-size: 18px;
+}
+
+/* .OpenSidebar #btnOpenIcon{
+    transform: rotate(180deg);
+    
+} */
+.itemDescripition{
+    width: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 18px;
+    transition: width .6s;
+    height: 0px;
+    
+}
+/* Classe adicionada pelo js que faz a magica */
+#sidebar.OpenSidebar{
+    min-width: 15%;
+}
+
+#sidebar.OpenSidebar .itemDescripition{
+    width: 150px;
+    height: auto;
+}
+
+#sidebar.OpenSidebar .sideItem a{
+    justify-content: flex-start;
+    gap: 14px;
+}
+
+#userAvatar{
+    width: 50px;
+    height: 50px;
+    object-fit:cover ;   /*para imagem nao perder a qualidade  */
+    border-radius: 20px;
+}
