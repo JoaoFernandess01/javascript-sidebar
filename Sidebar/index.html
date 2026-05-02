@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estiloGeral.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <title>Sidebar teste</title>
+</head>
+<body>
+    <nav id="sidebar">
+        <div id="sidebarContent">
+            <div id="user">
+                <img src="images/avatar2.jpg" id="userAvatar" alt="">
+                
+                <p id="userInfos">
+                    <span id="nomeUser" class="itemDescripition">
+                        
+                    </span>
+                    <span id="nomeProfissao" class="itemDescripition">
+                        
+                    </span>
+                </p>
+            </div>
+    
+            <ul id="sideItems">
+                <li data-msg="Olá, bem vindo(a) ao Dashboard, {nome}" class="sideItem active" >
+                    <a href="#">
+                        <i class="bi bi-graph-up"></i>
+                        <span class="itemDescripition">
+                            Dashboard
+                        </span>
+                    </a>
+                </li>
+    
+                <li  data-msg="Olá, bem vindo(a) aos Clientes, {nome}"class="sideItem">
+                    <a href="#">
+                        <i class="bi bi-people-fill"></i>
+                        <span class="itemDescripition">
+                            Clientes
+                        </span>
+                    </a>
+                </li>
+    
+                 <li data-msg="Olá, bem vindo(a) às Notificações, {nome}" class="sideItem">
+                    <a href="#">
+                        <i class="bi bi-bell-fill"></i>
+                        <span class="itemDescripition">
+                            Notificações
+                        </span>
+                    </a>
+                </li>
+    
+                 <li data-msg="Olá, bem vindo(a) aos Pedidos, {nome}" class="sideItem">
+                    <a href="#">
+                        <i class="bi bi-box-fill"></i>
+                        <span class="itemDescripition">
+                            Pedidos
+                        </span>
+                    </a>
+                </li>
+    
+                 <li data-msg="Olá, bem vindo(a) às Imagens, {nome}" class="sideItem">
+                    <a href="#">
+                        <i class="bi bi-image-fill"></i>
+                        <span class="itemDescripition">
+                            Imagens
+                        </span>
+                    </a>
+                </li>
+    
+                 <li data-msg="Olá, bem vindo(a) às Configurações, {nome}" class="sideItem">
+                    <a href="#">
+                        <i class="bi bi-gear-fill"></i>
+                        <span class="itemDescripition">
+                            Configurações
+                        </span>
+                    </a>
+                </li>
+            </ul>
+    
+            <button id="btnOpen">
+                <i id="btnOpenIcon" class="bi bi-chevron-right"></i>
+            </button>
+        </div>
+
+        <div id="logout">
+            <button id="btnLogout">
+                <i  class="bi bi-box-arrow-right"></i>
+                <span class="itemDescripition">
+                    Logout
+                </span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <h1 id="mensagemItem"></h1>
+    </main>
+
+    <script type="module" src="js/sidebarOpenClose.js"></script>
+    <script type="module" src="js/itemActive.js"></script>
+    <script type="module" src="js/toggleIconOpenClose.js"></script>
+    <script src="js/dateUser.js"></script>
+</body>
+</html>
