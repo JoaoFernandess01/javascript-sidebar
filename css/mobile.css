@@ -10,9 +10,19 @@
 main{
     z-index: 1;
     position: fixed;
-    padding-left: calc(82px + 20px);
+    padding-left: calc(82px + 30px);
 }
 #sidebar{
     z-index: 2;
+}
+#btnOpen{
+   top: 18px;
+   right: -20px;
+   width: 40px;
+   height: 40px;
+}
+
+#btnOpenIcon{
+    font-size: 22px;
 }
 }
